@@ -1,0 +1,49 @@
+.container{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    color: honeydew;
+   
+    &__button {
+        position: relative;
+        left: 500px;
+        top: 200px;
+    } 
+
+    &__figure_square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background:blue;
+    }
+
+    &__figure_circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background: red;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+
+    &__figure_triangle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid green;
+    }
+
+}
+
