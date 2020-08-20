@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./random.component.scss']
 })
 export class RandomComponent implements OnInit {
-
+  randomNumber: number  = this.getRandomNumber(0,100)
   constructor() { }
 
   ngOnInit(): void {
+  
+  }
+
+  public getRandomNumber(min: number, max: number): number {
+    return Math.round(Math.random() * (max - min) + min);
   }
 
 }
