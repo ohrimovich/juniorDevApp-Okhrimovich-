@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { RandomComponent } from './components/random/random.component';
+import { DeveloperComponent } from './components/developer/developer.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: HeaderComponent},
+  {path: 'random', component: RandomComponent},
+  {path: 'developer', component: DeveloperComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
