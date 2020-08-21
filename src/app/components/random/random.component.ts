@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RandomNumberService } from 'src/app/services/random-number.service';
+
 
 @Component({
   selector: 'app-random',
@@ -6,15 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./random.component.scss']
 })
 export class RandomComponent implements OnInit {
-  randomNumber: number  = this.getRandomNumber(0,100)
-  constructor() { }
+  public triangleCenter: boolean = false;
+  constructor(public randomNumberService: RandomNumberService) { }
 
   ngOnInit(): void {
   
   }
 
-  public getRandomNumber(min: number, max: number): number {
-    return Math.round(Math.random() * (max - min) + min);
+  get figureStyle() {
+    if(this.randomNumberService.randomNumber <= 33) {
+      this.triangleCenter = false
+      return 'container__figure_square'
+    }
+    if(this.randomNumberService.randomNumber >= 33 && this.randomNumberService.randomNumber <= 66) {
+      this.triangleCenter = false
+      return 'container__figure_circle'
+    }
+    if(this.randomNumberService.randomNumber >= 66 && this.randomNumberService.randomNumber <= 99) {
+      this.triangleCenter = true
+      return 'container__figure_triangle'
+    }
   }
 
 }
