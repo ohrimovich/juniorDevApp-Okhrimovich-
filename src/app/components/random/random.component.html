@@ -2,7 +2,11 @@
     <div [ngClass]="figureStyle">
        <span [ngClass]="{triangle_center: triangleCenter}">{{randomNumberService.randomNumber}}</span> 
     </div>
-    <div class="container__button">
+    <div class="container__button_gen">
         <button mat-stroked-button color="primary" (click)="randomNumberService.getRandomNumber()">Згенерувати</button>
     </div>
+    <div class="container__button_his">
+         <app-history-buttun></app-history-buttun>
+    </div>
+   
 </div>

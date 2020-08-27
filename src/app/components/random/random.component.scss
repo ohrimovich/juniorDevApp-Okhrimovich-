@@ -7,11 +7,17 @@
     top: 50%;
     color: honeydew;
    
-    &__button {
+    &__button_gen {
         position: relative;
         left: 500px;
         top: 200px;
     } 
+
+    &__button_his {
+        position: relative;
+        right: 500px;
+        top: 200px;
+    }
 
     &__figure_square {
         display: flex;
