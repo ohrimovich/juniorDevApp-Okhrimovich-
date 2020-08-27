@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { RandomNumberService } from 'src/app/services/random-number.service';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -23,5 +23,6 @@ export class HistoryButtunComponent {
       templateUrl: './dialog-content.html',
     })
     export class DialogContent {
+
       constructor(public randomNumberService: RandomNumberService) {}
     }
