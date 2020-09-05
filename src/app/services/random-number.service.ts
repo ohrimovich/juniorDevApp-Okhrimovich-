@@ -1,28 +1,27 @@
 import { Injectable } from '@angular/core';
-
+interface RandomTime {
+  time: Date,
+  num: number
+}
 @Injectable({
   providedIn: 'root'
 })
 export class RandomNumberService {
   randomNumber: number 
-  time: number
-  contentObj: Object
+  contentArr: RandomTime[] = []
   constructor() { }
 
   public getRandomNumber(min: number = 0, max: number = 100): number {
-    let timeBefore = new Date();
     this.randomNumber = Math.round(Math.random() * (max - min) + min);
-    let timeAfter = new Date();
-    this.time = timeAfter.getSeconds() - timeBefore.getSeconds();
     this.createContentObj();
     return this.randomNumber
   }
 
  public createContentObj() {
-  return this.contentObj = {
-    time: this.time,
+   this.contentArr.push({
+    time: new Date(),
     num: this.randomNumber
-   }
+   }) 
  }
 
 
