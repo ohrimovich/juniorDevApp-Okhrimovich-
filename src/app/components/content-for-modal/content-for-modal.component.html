@@ -1,5 +1,5 @@
 <ul>
     <li *ngFor="let obj of randomNumberService.contentArr">
-        {{obj.time | date }} - {{obj.num}}
+        {{obj.time | date: 'HH:mm:ss' }} - {{obj.num}}
     </li>
 </ul>
