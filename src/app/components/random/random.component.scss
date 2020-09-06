@@ -3,21 +3,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 100%;
-    top: 50%;
+    top: calc(50% - 50px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     color: honeydew;
    
-    &__button_gen {
-        position: relative;
-        left: 500px;
-        top: 200px;
-    } 
-
-    &__button_his {
-        position: relative;
-        right: 500px;
-        top: 200px;
-    }
 
     &__figure_square {
         display: flex;
@@ -55,5 +46,13 @@
         top: 50px;
     }
 
+}
+
+.wrapper__button {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 80%;
 }
 
