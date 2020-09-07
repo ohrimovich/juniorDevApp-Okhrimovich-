@@ -1,0 +1,18 @@
+.developer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 720px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0  auto;
+
+
+}
+
+.header_image {
+    background-image: url('/assets/images/avatar.jpg');
+    background-size: cover;
+}
+

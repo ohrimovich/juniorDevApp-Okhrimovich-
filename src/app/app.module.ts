@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HistoryButtunComponent } from './components/history-buttun/history-buttun.component';
 import { ContentForModalComponent } from './components/content-for-modal/content-for-modal.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ContentForModalComponent } from './components/content-for-modal/content
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
